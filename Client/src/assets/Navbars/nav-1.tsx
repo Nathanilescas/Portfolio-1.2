@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-
+import logo from '../../../public/Logo/site_logo-60x42.png'
+import resume from '../../../Data/Resume-Nathan-Ilescas.pdf'
 
 import './Styles/nav-general.css';
 import { IoMdArrowDropdown } from "react-icons/io"; // React-Icon
@@ -45,13 +46,13 @@ function Navigation_1(props:any) {
 
     return (
         <nav id="nav-bar">
-            <figure className="nav-image"><img src="../../../public/Logo/site_logo-60x42.png" alt="" /></figure>
+            <figure className="nav-image"><img src={logo} alt="Logo" /></figure>
             <div className="nav-menu-container" >
                 <ul className="nav-list" onClick={toggleListItems}>
                     <li data-nav-id={'home'}><a href="">Home</a></li>   
                     <li data-nav-id={'projects'}><a href="">Projects</a></li>
                     <li data-nav-id={'blog'} className="nav-dropdown-item" ><a>Blog</a><span className='nav-dropdown-icon flip-icon'><IoMdArrowDropdown /></span></li>
-                    <li><a href="../../../Data/Resume-Nathan-Ilescas.pdf">Resume</a></li>
+                    <li><a href={resume}>Resume</a></li>
                 </ul>
 
                 <DropDownMenu/>

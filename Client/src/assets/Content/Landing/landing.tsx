@@ -1,6 +1,6 @@
 
 import './styles.css'
-
+import profileImage from '../../../../public/Images/profile.jpg'
 
 function Home() {
     return (
@@ -9,7 +9,7 @@ function Home() {
                 <header><h1>Full-Stack Developer</h1></header>
                 <h2>Nathan Ilescas</h2>
                 <figure>
-                    <img src="./profile.jpg" alt="Profile Image" />
+                    <img src={profileImage} alt="Profile Image" />
                 </figure>
             </main>
             <span>\/</span>
