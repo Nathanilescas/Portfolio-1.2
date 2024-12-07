@@ -9,7 +9,7 @@ function Home() {
                 <header><h1>Full-Stack Developer</h1></header>
                 <h2>Nathan Ilescas</h2>
                 <figure>
-                    <img src="../../../public/Images/profile.jpg" alt="" />
+                    <img src="./profile.jpg" alt="Profile Image" />
                 </figure>
             </main>
             <span>\/</span>

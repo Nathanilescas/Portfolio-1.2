@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 
 import './Styles/nav-general.css';
@@ -25,7 +25,7 @@ function DropDownMenu() {
     )
 }
 
-function Navigation_1(props) {
+function Navigation_1(props:any) {
 
     function checkAttributes() {
         const nav_items = document.getElementsByClassName('nav-list');

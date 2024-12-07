@@ -65,7 +65,6 @@ export function Footer_1() {
 
 
 function checkContactEntry() {
-    event.preventDefault();
 
     const tag = document.getElementsByClassName('footer-contact')[0];
     const inputs = tag.querySelectorAll('input');
@@ -79,7 +78,7 @@ function checkContactEntry() {
 
     }
 }
-function checkNull(input) {
+function checkNull(input:any) {
     return (input) ? true : false;
 }
 export default Footer_1;

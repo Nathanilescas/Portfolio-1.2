@@ -43,7 +43,7 @@ function AboutMe() {
     )
 }
 
-function Headline(props) {
+function Headline(props:any) {
     return (
         <div className='headline'>
             <header><h2>{props.headline}</h2></header>
