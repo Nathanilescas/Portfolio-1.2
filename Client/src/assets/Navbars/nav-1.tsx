@@ -51,7 +51,7 @@ function Navigation_1(props) {
                     <li data-nav-id={'home'}><a href="">Home</a></li>   
                     <li data-nav-id={'projects'}><a href="">Projects</a></li>
                     <li data-nav-id={'blog'} className="nav-dropdown-item" ><a>Blog</a><span className='nav-dropdown-icon flip-icon'><IoMdArrowDropdown /></span></li>
-                    <li><a href="">Resume</a></li>
+                    <li><a href="../../../Data/Resume-Nathan-Ilescas.pdf">Resume</a></li>
                 </ul>
 
                 <DropDownMenu/>

@@ -4,7 +4,9 @@ body { /*Add this to the main style sheet*/
 
 #nav-bar {
     display: flex;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 
     background: linear-gradient(#F6F6F6, #aed7d4);
 
@@ -162,7 +164,7 @@ body { /*Add this to the main style sheet*/
         left: -90%; 
         top: 100px;
         height: 89vh;
-        background-color: rgba(0, 0, 0, 0.409);
+        background: linear-gradient(#C7FFD8, #98DED9);
 
         transition: transform 500ms linear;
     }
