@@ -1,8 +1,8 @@
 
 import './styles.css'
-import profileImage from '../../../../public/Images/profile.jpg'
+import profileImage from '../../../public/Images/profile.jpg'
 
-function Home() {
+function Landing() {
     return (
         <div id='home'>
             <main>
@@ -18,4 +18,4 @@ function Home() {
 }
 
 
-export default Home;
+export default Landing;

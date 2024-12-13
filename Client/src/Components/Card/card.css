@@ -1,0 +1,135 @@
+:root {
+    --box-radius: 10px;
+}
+
+
+.card-cover {
+    position: relative;
+
+
+    width: 400px;
+    
+    a {
+        text-decoration: none;
+    }
+}
+.card-cover:hover .card-text svg {
+    left: 20px;
+}
+
+
+.card-header {
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 5px 25px;
+
+
+    border-radius: 5px;
+}
+.card-header h2 {
+    color: white;
+    margin: 0;
+}
+
+
+.card-image {
+
+    width: 100%;
+    height: 100%;
+    
+    margin: 0;
+    border-radius: 10px;
+
+    img {
+        border-radius: var(--box-radius);
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+.card-text {
+    border-radius: 0 0 var(--box-radius) var(--box-radius);
+
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+
+    position: absolute;
+    bottom: 0;
+
+    font-size: 1.5rem;
+    color: white;
+
+    height: 200px;
+    width: 100%;
+
+    padding: 15px;
+
+    box-shadow: /* BOTTOM */
+                inset 0 -20px 5px 0 rgba(137, 43, 226, 0.9),
+                inset 0 -30px 5px 0 rgba(137, 43, 226, 0.9),
+                /* MIDDLE*/
+                inset 0 -80px 10px 0 rgba(137, 43, 226, 0.8),
+                inset 0 -100px 15px 0 rgba(137, 43, 226, 0.6),
+                /* TOP */
+                inset 0 -160px 20px 0 rgba(137, 43, 226, 0.4),
+                inset 0 -180px 30px 0 rgba(137, 43, 226, 0.4);
+}
+
+.card-text p {
+    height: 100%;
+    max-height: 140px;
+
+    margin: 0;
+    text-wrap: pretty;
+    text-align: left;
+    width: 85%;
+
+    overflow-y: auto;
+}
+.card-text i {
+    position: relative;
+    margin-bottom: 10px;
+}
+.card-text svg {   
+    transition: left 200ms linear;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: 2em;
+    height: 2em;
+}
+
+@media (max-width: 768px) {
+    
+    .card-cover {
+        position: relative;
+        width: 90%;
+        
+        a {
+            text-decoration: none;
+        }
+    }
+    .card-text i {
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .card-text svg {   
+        transition: left 200ms linear;
+        position: absolute;
+        left: 0px;
+        bottom: 0;
+        width: 2em;
+        height: 2em;
+    }
+    .card-cover:hover .card-text svg {
+        left: 10px;
+    }
+    
+}

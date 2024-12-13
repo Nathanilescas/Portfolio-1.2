@@ -16,15 +16,7 @@ body { /*Add this to the main style sheet*/
     user-select: none;
 }
 
-
-
-.nav-image { /*This still need work on*/
-    position: absolute;
-}
-
-
-/*LIST ITEMS STYLES*/
-
+/* LIST ITEMS STYLES */
 .nav-menu-container {
     width: 100%;
 }
@@ -54,6 +46,9 @@ body { /*Add this to the main style sheet*/
 }
 
 
+.nav-image { /*This still need work on*/
+    position: absolute;
+}
 
 /* DROPDOWN MENU */
 .nav-dropdown-menu {
@@ -61,7 +56,7 @@ body { /*Add this to the main style sheet*/
     left: 25%;
     top: 100px;
 
-    height: 150px;
+    height: 250px;
     width: 50%;
     padding: 10px;
 
@@ -102,12 +97,10 @@ body { /*Add this to the main style sheet*/
 } 
 
 
-.hamburger-icon {
-    display: none;  
-}
 
 /***************** MEDIUM SCREEN SIZE ******************/
 @media (max-width: 768px) {
+    /* DROP-DOWN MENU */
     .nav-dropdown-menu {
         position: absolute;
         left: 0;
@@ -152,13 +145,7 @@ body { /*Add this to the main style sheet*/
     } 
 
 
-
-
-
-
-
-
-
+    /* NAV MENU */
     .nav-menu-container {
         position: relative;
         left: -90%; 
@@ -203,38 +190,6 @@ body { /*Add this to the main style sheet*/
         transform: translateX(90vw);
     }
 
-
-
-    .hamburger-icon {
-        box-sizing: border-box;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        width: 65px;
-        
-        padding: 8px;
-        border: 1px solid rgba(255, 255, 255, 0);
-        transition: border 300ms linear;
-        border-radius: 5px;
-
-    }
-    .hamburger-icon:hover {
-        transition: border 300ms linear;
-        border: 1px solid #161D6F;
-    }
-    .hamburger-bar1,
-    .hamburger-bar2,
-    .hamburger-bar3 {
-        width: 100%;
-        height: 4px;
-
-        margin: 3px 0;
-        border-radius: 10px;
-        background-color: #161D6F;
-        transition: 400ms;
-    }
-
 }
 
 
@@ -257,10 +212,3 @@ body { /*Add this to the main style sheet*/
 }
 
 
-.change .hamburger-bar1 {
-    transform: translate(0, 9px) rotate(-45deg);
-}.change .hamburger-bar2 {
-    opacity: 0;
-}.change .hamburger-bar3 {
-    transform: translate(0, -9px) rotate(45deg);
-}
