@@ -4,24 +4,7 @@
     background: linear-gradient(#98DED9, #F6F6F6);
 }
 
-.headline {
-    padding-top: 20px;
-    margin-bottom: 50px;
-    font-size: clamp(1.3rem, 5vw, 2rem);
 
-    h2 {
-        text-align: center;
-        margin: 10px;
-    }
-}
-.under-line {
-    margin: 0 auto;
-    display: block;
-    height: 5px;
-    width: 100px;
-    border-radius: 8px;
-    background-color: #161D6F;
-}
 
 .section-container-adjacent {
     display: grid;

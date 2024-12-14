@@ -1,6 +1,6 @@
 
-import './styles.css'
-import profileImage from '../../../public/Images/profile.jpg'
+import './landing.css'
+import profileImage from '../../../../public/Images/profile.jpg'
 
 function Landing() {
     return (
@@ -12,7 +12,7 @@ function Landing() {
                     <img src={profileImage} alt="Profile Image" />
                 </figure>
             </main>
-            <span>\/</span>
+            <span>\/</span> 
         </div>
     )
 }

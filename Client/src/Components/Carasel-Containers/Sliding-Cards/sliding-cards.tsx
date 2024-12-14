@@ -12,7 +12,19 @@ export default function SlidingCards() {
     const screenPositions = [550, 1000, 2000, 2700]
 
     const [isMoving, setMove] = useState(new Array(size).fill(false));
+    const [currentScreenPosition, setPosition] = useState(0);
 
+
+    useEffect(() => {
+        window.addEventListener('wheel', () => {
+            setPosition(window.scrollY)
+            fireForward()
+        })
+        window.addEventListener('touchmove', () => {
+            setPosition(window.scrollY)
+            fireForward()
+        })
+    })
     
     function createMovingContainer() {
         
@@ -25,7 +37,7 @@ export default function SlidingCards() {
                         <Card 
                             title={item.heading}
                             description={item.description}
-                            url={null}
+                            url={item.url}
                             image={'https://puzzlemania-154aa.kxcdn.com/products/2024/puzzle-schmidt-1000-pieces-random-galaxy.webp'}
                         />
                     </span>
@@ -35,33 +47,13 @@ export default function SlidingCards() {
     }
 
 
-    const [currentScreenPosition, setPosition] = useState(0);
-    useEffect(() => {
-        // check for finger scroll
-        window.addEventListener('wheel', () => {
-            setPosition(window.scrollY)
-            fireForward()
-        })
-        window.addEventListener('touchmove', () => {
-            setPosition(window.scrollY)
-            fireForward()
-        })
-    })
-
-
-
-
     function fireForward() {
-        console.log(currentScreenPosition)
         if (screenPositions[0] < currentScreenPosition) moveForwardContainer(0);
         if (screenPositions[1] < currentScreenPosition) moveForwardContainer(1);
         if (screenPositions[2] < currentScreenPosition) moveForwardContainer(2);
         if (screenPositions[3] < currentScreenPosition) moveForwardContainer(3);
 
     }
-
-    
-
 
     function moveForwardContainer(index:number) {
 

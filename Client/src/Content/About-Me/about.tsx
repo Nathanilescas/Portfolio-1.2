@@ -1,5 +1,6 @@
+import Headline from '../../Components/HeadLine/Headline-1/headline';
 
-import './styles.css'
+import './about.css'
 
 function AboutMe() {
     return (
@@ -43,13 +44,5 @@ function AboutMe() {
     )
 }
 
-function Headline(props:any) {
-    return (
-        <div className='headline'>
-            <header><h2>{props.headline}</h2></header>
-            <span className='under-line'></span>
-        </div>
-    )
-}
 
 export default AboutMe;

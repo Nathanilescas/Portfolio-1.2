@@ -4,13 +4,13 @@ export const PROJECT_WORK = [
     {
         heading: "Session Recorder",
         description: "I build a session recorder for UI and UX",
-        url: "/session-recorder",        
+        url: "/projects/session-recorder",        
         image: 'https://puzzlemania-154aa.kxcdn.com/products/2024/puzzle-schmidt-1000-pieces-random-galaxy.webp',
     },
     {
         heading: "Chat Box",
         description: "I build a chat box to communicate with customers",
-        url: '/chat-box',
+        url: '/projects/chat-box',
         image: 'https://puzzlemania-154aa.kxcdn.com/products/2024/puzzle-schmidt-1000-pieces-random-galaxy.webp',
     },
     {
