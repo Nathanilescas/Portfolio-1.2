@@ -1,9 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 import './sliding-cards.css'
 import Card from '../../Card/card'
 
-import { PROJECT_WORK } from '../../../../Data/Project-Work/project-work-information.js'
+import { PROJECT_WORK } from '../../../../Data/Project-Work/project-work-information.tsx'
 
 
 
@@ -31,14 +31,19 @@ export default function SlidingCards() {
         const x = 'move' // the class name that moves them
         
         return (
-            PROJECT_WORK.map((item:string, i:number) => {
+            PROJECT_WORK.map(( item, i ) => {
                 return (
                     <span className={ (isMoving[i]) ? x : ''} key={i}>
                         <Card 
-                            title={item.heading}
-                            description={item.description}
-                            url={item.url}
-                            image={'https://puzzlemania-154aa.kxcdn.com/products/2024/puzzle-schmidt-1000-pieces-random-galaxy.webp'}
+                            cardInformation={
+                                {
+                                    title: item.heading,
+                                    description: item.description,
+                                    url: item.url,
+                                    image: item.image,
+
+                                }
+                            }
                         />
                     </span>
                 )

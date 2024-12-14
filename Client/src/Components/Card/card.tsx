@@ -2,23 +2,31 @@ import './card.css'
 
 import { BsArrowBarRight } from "react-icons/bs";
 
-export default function Card({ title, description, url, image}) {
+interface CardInformation {
+    title: string,
+    description: string,
+    url: string,
+    image: string,
+}
+
+
+export default function Card({ cardInformation }: { cardInformation: CardInformation }) {
     return (
-        <CardCover url={url}>
+        <CardCover url={cardInformation.url}>
             <div className='card-header'>
-                <h2>{title}</h2>
+                <h2>{cardInformation.title}</h2>
             </div>
             <figure className='card-image'>
-                <img src={image} alt={title} />
+                <img src={cardInformation.image} alt={cardInformation.title} />
             </figure>
             <CardArticle>
-                {description}
+                {cardInformation.description}
             </CardArticle>
         </CardCover>
     )
 }
 
-function CardArticle({children}) {
+function CardArticle({ children }: { children: any }) {
     return (
         <section className='card-text'>
             <p>
@@ -31,7 +39,7 @@ function CardArticle({children}) {
 }
 
 
-function CardCover({url, children}) {
+function CardCover({ url, children }: { url: string, children: any }) {
     return (
         <article className='card-cover'>
             <a href={url}>

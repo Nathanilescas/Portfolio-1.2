@@ -1,6 +1,13 @@
 
+interface ProjectItem {
+    heading: string,
+    description: string,
+    url: string,
+    image: string,
+}
 
-export const PROJECT_WORK = [
+
+export const PROJECT_WORK: ProjectItem[] = [
     {
         heading: "Session Recorder",
         description: "I build a session recorder for UI and UX",

@@ -2,14 +2,20 @@ import Headline_2 from "../../../Components/HeadLine/Headline-2/headline-2";
 
 import './category.css'
 
-export default function Category({ categoryElements }) {
+
+interface ItemDescription {
+    name: string,
+    description: string,
+}
+
+export default function Categories( { categoryElement } : { categoryElement: ItemDescription[] } ) {
     
     const singleCategory = () => {
         return (
             <>
                 {
-                    categoryElements.map((element, index) => (
-                        <SingleElement
+                    categoryElement.map(( element:{ name: string, description: string }, index:number ) => (
+                        <Category
                             name={element.name}
                             description={element.description}
                             key={index}
@@ -33,7 +39,7 @@ export default function Category({ categoryElements }) {
     )
 }
 
-function SingleElement({name, description}) {
+function Category( { name, description }: ItemDescription ) {
     return (
         <span className="single-element">
             <h3>{name}</h3>

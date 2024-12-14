@@ -1,7 +1,12 @@
 import './hamburger-button.css'
 
 
-export default function HamburgerButton({toggleMenu, closeListItems}) {
+type HamburgerButtonProps = {
+    toggleMenu: () => void;
+    closeListItems: () => void;
+}
+
+export default function HamburgerButton({ toggleMenu, closeListItems }: HamburgerButtonProps ) {
     function toggleHamburger() {
         document.getElementsByClassName('hamburger-icon')[0].classList.toggle('change');
         toggleMenu();

@@ -1,10 +1,10 @@
 import './styles.css'
 
-import Navigation_1 from "../Navbars/nav-1";
-import Footer_1 from "../Footers/footer-1";
+import Navigation_1 from '../../Components/Navbars/nav-1';
+import Footer_1 from '../../Components/Footers/footer-1';
 
 
-function MergeSort(props:any) {
+function MergeSort() {
     
     
     return (

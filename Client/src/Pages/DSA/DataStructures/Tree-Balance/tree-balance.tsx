@@ -1,5 +1,4 @@
-import PageHeader from "../../../../../Components/PageTitle/page-title";
-
+import PageHeader from "../../../../Components/PageTitle/page-title"
 
 export default function TreeBalance() {
     return (
