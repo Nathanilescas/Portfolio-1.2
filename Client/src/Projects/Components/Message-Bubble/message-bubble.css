@@ -1,0 +1,15 @@
+
+.message-bubble {
+    display: inline-block;
+    margin: 5px 2px;
+    text-align: center;
+
+
+}
+
+.message-bubble p {
+    background-color: lightblue;
+
+    margin: 0;
+    padding: clamp();
+}

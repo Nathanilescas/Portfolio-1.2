@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2016",               /* Target ECMAScript version */
+    "module": "ESNext",               /* Output ES modules (ES6/ESNext) */
+    "moduleResolution": "node",       /* Resolve modules like Node.js */
+    "rootDir": "./src",               /* Root directory for source files */
+    "outDir": "./dist",               /* Output directory for compiled files */
+    "esModuleInterop": true,          /* Enable compatibility with CommonJS */
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,                   /* Enable strict type-checking */
+    "skipLibCheck": true,             /* Skip library type checking */
+    "jsx": "react"                    /* Handle JSX in .tsx files */
+  },
+  "include": [
+    "./src/**/*"                      /* Include all files in the src folder */
+, "StoreageSystem"  ]
+}

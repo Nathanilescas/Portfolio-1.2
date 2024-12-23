@@ -1,10 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import IlescasApp from './app.js'
+import ChatBox from './Projects/ChatBox/chatbox'
+// import IlescasApp from './app.js'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <IlescasApp />
+    <ChatBox/>
+    {/* <IlescasApp /> */}
   </StrictMode>,
 )
