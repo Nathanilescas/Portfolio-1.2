@@ -1,0 +1,9 @@
+
+
+.movement {
+    transform: translateX(110%);
+    transition: transform 1000ms ease-in;
+}
+.in-view {
+    transform: translateX(0);
+}

@@ -1,0 +1,12 @@
+
+.fade-option {
+    opacity: 1;
+    transition: opacity 800ms ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    z-index: 1;
+}
+
+
