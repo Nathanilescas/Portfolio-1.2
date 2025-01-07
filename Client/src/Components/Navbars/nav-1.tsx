@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import HamburgerButton from "./NavComponents/hamburger-button";
+import HamburgerButton from "./NavComponents/HamburgerButton/hamburger-button";
+import AccessForm  from "./NavComponents/AccessForm/access-form";
 
 // Files
 import logo from '../../../public/Logo/site_logo-60x42.png'
@@ -8,6 +9,7 @@ import resume from '../../../Data/Resume_Nathan-Ilescas.pdf'
 // Styles
 import './nav-1.css';
 import { IoMdArrowDropdown } from "react-icons/io"; // React-Icon
+import AccessPopUp from "../Pop-Up/access-pop-up";
 
 
 function DropDownMenu() {
@@ -57,15 +59,19 @@ function Navigation_1(props:any) {
     return (
         <nav id="nav-bar">
             <figure className="nav-image"><img src={logo} alt="Logo" /></figure>
-            <div className="nav-menu-container" onClick={toggleListItems}>
+            <div className="nav-menu-container" >
                 <ul className="nav-list">
                     <li data-nav-id={'home'}><a href="/">Home</a></li>   
                     <li data-nav-id={'projects'}><a href="">Projects</a></li>
-                    <li data-nav-id={'blog'} className="nav-dropdown-item"><a>Blog</a><span className='nav-dropdown-icon flip-icon'><IoMdArrowDropdown /></span></li>
+                    <li data-nav-id={'blog'} className="nav-dropdown-item" onClick={toggleListItems}><a>Blog</a><span className='nav-dropdown-icon flip-icon'><IoMdArrowDropdown /></span></li>
                     <li><a href={resume}>Resume</a></li>
                 </ul>
                 <DropDownMenu/>
+                <AccessForm showAccessForm={toggleAccessMenu} />
             </div>
+            <AccessPopUp
+                showAccessForm={toggleAccessMenu}
+            />
             <HamburgerButton closeListItems={closeListItems} toggleMenu={toggleMenu}/>
         </nav>
     )
@@ -85,6 +91,11 @@ function toggleMenu() {
     document.getElementsByClassName('nav-menu-container')[0].classList.toggle('slide-menu');
 }
 
+
+/* Show Login Menu */
+function toggleAccessMenu() {
+    document.getElementsByClassName('accessForm')[0].classList.toggle('visible')
+}
 
 
 export default Navigation_1;
