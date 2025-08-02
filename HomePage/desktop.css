@@ -11,6 +11,7 @@ body {
     background-color: #13005a;
 
     margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -25,36 +26,44 @@ body {
 
 /** FIRST SECTION STYLES  **/
 .secondary-container:first-child {
-    width: 50%;
+    width: 30%;
     height: 100vh;
+
+    padding-left: 10%;
 }
 
 
 /** HEADER **/
 .secondary-container header {
-    height: 50%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end; 
 
+    height: 40%;
 
-    justify-items: center;
-    align-content: center;
+    margin-bottom: 20px;
+
 
     color: #ebecf1;
+    user-select: none;
+
 }
 
 /*TEXT*/
 .secondary-container h1 {
-    font-size:  4rem; /*find a better size*/
+    font-size:  3rem; /*find a better size*/
     font-family: Orbitron;
-
-    text-align: center;
+    white-space: nowrap;
 
     margin: 0;
 }
 .secondary-container h2 {
     font-family: Quicksand;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     margin: 0;
+
+    text-align: center;
 }
 
 
@@ -69,22 +78,34 @@ nav {
 
 nav ol {
     list-style: none;
+    padding: 0;
 }
 
-nav ol li {
-    margin: 15px;
-}
 
+
+/* DIVIDER LINE*/
 nav ol li span {
 
     background-color: black;
     display: inline-flex;
+    vertical-align: middle;
 
     width: 50px;
 
 
-    border: 1px solid #03c929;
+    border: 2px solid #03c929;
     border-radius: 2px;
+}
+
+/* MENU TEXT */
+nav ol li a {
+    text-decoration: none;
+
+    font-family: Quicksand;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
 }
 
 
@@ -97,6 +118,110 @@ nav ol li span {
 
 
 .secondary-container:last-child {
-    width: 50%;
+    width: 70%;
+
+    padding: 1%;
     background-color: rgb(186, 120, 21);
+}
+
+.secondary-container .info-container {
+    background-color: #03c929;
+    height: 100%;
+    
+
+    overflow-y: scroll;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Items */
+.info-card {
+
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 20%;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    transition: background-color 0.5s ease-in-out;
+}
+.info-card:hover {
+    background-color: lightgray;
+}
+
+
+/* ALL TEXT */
+.info-card-text {
+    height: 40%;
+    white-space: wrap;
+}
+
+/* HEADER TEXT */
+.info-card .info-card-header {
+    display: inline-flex;
+
+    
+}
+.info-card .info-card-header h3 {
+    margin: 0 0 5px 0;
+
+    font-family: Orbitron;
+    font-size: 1.5rem;
+}
+
+/* PARAGRAPH TEXT*/
+.info-card p {
+    font-family: Quicksand;
+
+    margin: 0;
+}
+
+/* SKILLS */
+.info-card .info-card-skill ol {
+    display: flex;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.info-card .info-card-skill li {
+    height: 10%;
+    margin-left: 10px;
+    
+    background-color: #11441c;
+    border-radius: 10px;
+
+    width: 100px;
+
+
+    text-align: center;
+}
+.info-card .info-card-skill li h4 {
+    user-select: none;
+    font-family: Quicksand;
+
+    margin: 5px;
 }
