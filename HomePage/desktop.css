@@ -167,7 +167,10 @@ nav ol li a {
     border-radius: 10px;
 
     transition: background-color 0.5s ease-in-out;
+
+    
 }
+
 .info-card:hover {
     background-color: lightgray;
 }
@@ -175,25 +178,59 @@ nav ol li a {
 
 /* ALL TEXT */
 .info-card-text {
-    height: 40%;
+
+    height: 50%;
     white-space: wrap;
 }
 
 /* HEADER TEXT */
 .info-card .info-card-header {
     display: inline-flex;
-
-    
 }
 .info-card .info-card-header h3 {
+    align-self: center;
+
     margin: 0 0 5px 0;
 
     font-family: Orbitron;
+    
+    
+}
+.info-card-header-employer {
     font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.info-card-header-title {
+    font-size: 1.2rem;
+    font-style: italic;
 }
 
+.info-card-header-separator {
+    display: inline-block;
+    align-self: center;
+
+    background-color: black;
+
+    width: 10px;
+
+    margin: 0 6px;
+    padding:0;
+    
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+
+
+/* DATE TEXT */
+.info-card-date {
+    display: block;
+    font-family: Quicksand;
+}
+
+
 /* PARAGRAPH TEXT*/
-.info-card p {
+.info-card .info-card-description {
     font-family: Quicksand;
 
     margin: 0;
