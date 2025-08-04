@@ -1,0 +1,136 @@
+@font-face{
+    font-family: 'Orbitron';
+    src: url(../Fonts/Orbitron-font/Orbitron-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../Fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+
+
+
+
+
+/* Items */
+.info-card {
+    display: inline-flex;
+    flex-direction: column;
+
+
+    height: auto;
+    width: 500px;
+
+    padding: 20px;
+    margin-bottom: 50px;
+
+    border-radius: 10px;
+
+    transition: background-color 0.5s ease-in-out,
+                box-shadow 0.5s ease-in-out;
+
+    cursor: pointer;
+}
+
+.info-card:hover {
+    background-color: rgba(211, 211, 211, 0.129);
+    box-shadow: 0px 0px 10px  rgb(25, 71, 187);
+
+}
+
+
+/* ALL TEXT */
+.info-card-text {
+    height: auto;
+    white-space: wrap;
+    
+}
+
+/* HEADER TEXT */
+.info-card .info-card-header {
+    display: inline-flex;
+}
+.info-card .info-card-header h3 {
+    align-self: center;
+
+    margin: 0 0 5px 0;
+
+    font-family: Orbitron;
+    color: #ebecf1;
+    
+}
+.info-card-header-employer {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.info-card-header-title {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.info-card-header-separator {
+    display: inline-block;
+    align-self: center;
+
+    background-color: black;
+
+    width: 10px;
+
+    margin: 0 6px;
+    padding:0;
+    
+    border: 1.5px solid #ebecf1;
+    border-radius: 1px;
+}
+
+
+
+/* DATE TEXT */
+.info-card-date {
+    display: block;
+
+    font-family: Quicksand;
+    font-weight: 700;
+    color: #ebecf1;
+}
+
+
+/* PARAGRAPH TEXT*/
+.info-card .info-card-description {
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 500;
+    color: #adb5dc;
+
+    margin: 15px 0;
+}
+
+/* SKILLS */
+.info-card .info-card-skill ol {
+    display: flex;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.info-card .info-card-skill li {
+    height: 10%;
+    margin-left: 10px;
+    
+    background-color: #11441c;
+    border-radius: 10px;
+
+    width: auto;
+
+
+    text-align: center;
+}
+.info-card .info-card-skill li h4 {
+    user-select: none;
+    font-family: Quicksand;
+
+    margin: 5px;
+}
+
+
+

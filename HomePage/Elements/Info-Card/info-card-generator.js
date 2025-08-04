@@ -1,26 +1,23 @@
 import { card_experience } from '../../../Protfolio-Data/Experience.js'
 
 function createMainContianer() {
-
-    const mainContainer = document.createElement('div');
-    mainContainer.classList.add('info-card');
-
+    const cards = [];
     const experienceData =  getCardInfo(card_experience);
 
     experienceData.forEach( element => {
-        const headerElement = generatorHeader(element.employer, element.title)
-        console.log(element)
-        console.log(element.date);
-        console.log(element.description);
+        let  mainContainer = document.createElement('div');
+        mainContainer.classList.add('info-card');
 
-        element.skills.forEach( skill => {
+        const mainInfoCardText =  generatorInfoCardText(element.employer, element.title, element.date, element.description);
+        const mainSkills = generateSkills(element.skills);
 
-            console.log(skill)
-        })
+        mainContainer.append(mainInfoCardText);
+        mainContainer.append(mainSkills);
 
-    })
-
-
+        cards.push(mainContainer);
+    })  
+    
+    return cards;
 }
 
 function getCardInfo(data) {
@@ -45,13 +42,13 @@ function getCardInfo(data) {
 
 
 // MAIN - INFO CARD SECTION GENERATOR
-function generatorInfoCardText() {
+function generatorInfoCardText(employer_data, title_data, date_data, description_data) {
     const mainInfoCardContainer = createTextSection();
 
     const info_card_section = []
-    info_card_section.push(generatorHeader());
-    info_card_section.push(createTimeText());
-    info_card_section.push(createDescription());
+    info_card_section.push(generatorHeader(employer_data, title_data));
+    info_card_section.push(createTimeText(date_data));
+    info_card_section.push(createDescription(description_data));
     
     info_card_section.forEach(element => {
         mainInfoCardContainer.append(element)
@@ -126,13 +123,11 @@ function createArrowIcon() {
 }
 
 // TIME
-function createTimeText(time_data_text, time_meta_data) {
+function createTimeText(time_data_text) {
     const timeText = document.createElement('time');
     timeText.classList.add('info-card-date')
 
     timeText.textContent = time_data_text;
-    timeText.setAttribute('datetime', time_meta_data);
-
     return timeText;
 }
 
@@ -151,6 +146,7 @@ function createDescription(description_data) {
 // MAIN - SKILL SECTION
 function generateSkills(skillList) {
     const mainSkillContainer = createSkillSection();
+
     mainSkillContainer.append(createSkillList(skillList));
 
     return mainSkillContainer;
@@ -158,19 +154,22 @@ function generateSkills(skillList) {
 
 function createSkillSection() {
     const skillSection = document.createElement('div');
-    return skillSection.classList.add('info-card-skill');
+    skillSection.classList.add('info-card-skill');
+
+    return skillSection;
 }
 function createSkillList(skillList) {
+
     const skillOrderedList = document.createElement('ol');
 
     skillList.forEach( element => {
-
         let skillItem = document.createElement('li');
         let skillText = document.createElement('h4');
 
         skillText.textContent = element;
 
-        skillOrderedList.append(skillItem.append(skillText));
+        skillItem.append(skillText)
+        skillOrderedList.append(skillItem);
     })
 
     return skillOrderedList;
