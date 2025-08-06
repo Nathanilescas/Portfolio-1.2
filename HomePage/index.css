@@ -84,12 +84,16 @@ nav {
 nav ol {
     list-style: none;
     padding: 0;
+
+    li {
+        margin: 8px 0;
+    }
 }
 
 
 
 /* DIVIDER LINE*/
-nav ol li span {
+.dash-green {
 
     background-color: black;
     display: inline-flex;
@@ -102,10 +106,16 @@ nav ol li span {
     border-radius: 2px;
 
     margin-right: 10px;
+
+    transition: width 0.5s ease-in-out;
+}
+.dash-green.active {
+    width: 100px;
+
 }
 
 /* MENU TEXT */
-nav ol li a {
+.nav-item {
     text-decoration: none;
 
     font-family: Quicksand;
@@ -126,10 +136,10 @@ nav ol li a {
 
 .secondary-container:last-child {
     width: 70%;
-    height: 55vh;
+    height: 500px;
     padding: 10% 0;
     
-
+    scroll-behavior: smooth;
 
     overflow-y: scroll;
 }
@@ -173,7 +183,8 @@ nav ol li a {
 .section-about {
     font-family: Quicksand;
 
-    padding: 10% 10% 0 10%;
+    width: 80%;
+    margin-left: 8%;
     color: #ebecf1;
 }
 
