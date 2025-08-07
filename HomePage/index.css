@@ -139,7 +139,7 @@ nav ol {
     height: 500px;
     padding: 10% 0;
     
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; Fix the glitching if i want to add */ 
 
     overflow-y: scroll;
 }
