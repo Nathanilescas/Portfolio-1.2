@@ -111,7 +111,6 @@ nav ol {
 }
 .dash-green.active {
     width: 100px;
-
 }
 
 /* MENU TEXT */
@@ -189,7 +188,28 @@ nav ol {
 }
 
 
+/* SOCIAL MEDIA */
+.social-media ol {
+    list-style: none;
 
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.social-media li {
+    border-radius: 150px;
+    
+    transition: box-shadow .3s ease-in-out;
+    
+    ol {
+        padding: 0;
+        user-select: none;
+    }
+}
+.social-media li:hover {
+    box-shadow: 0 0 15px #ebecf1;
+}
 
 
 
