@@ -1,0 +1,76 @@
+@font-face{
+    font-family: 'Orbitron';
+    src: url(../Fonts/Orbitron-font/Orbitron-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../Fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+
+/* NAVBAR MENU */
+#nav-bar-menu {
+    width: 100%;
+    height: 10vh;
+
+    position: fixed;
+    bottom: 0;
+
+    background-color: #13005a;
+}
+
+#nav-bar-menu ol {
+    display: flex;
+    flex-direction: row;
+
+    list-style: none;
+
+    justify-content: space-evenly;
+
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    li {
+        text-align: center;
+        height: 100%;
+        width: 33%;
+        align-content: center;
+        justify-self: center;
+        padding: 0 10px 0 10px;
+    }
+    li:nth-child(2){
+        border-width: 2px;
+        border-style: solid;
+        border-color: #03c929;
+        
+        border-top: none;
+        border-bottom: none;
+
+        padding: 0 15px 0 15px;
+    }
+}
+
+
+#nav-bar-menu a {
+    font-family: Orbitron;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    color:#ebecf1;
+
+}
+
+#nav-bar-menu .active { 
+    background-color: #03c929;
+}
