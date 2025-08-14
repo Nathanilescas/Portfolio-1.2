@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
-  "author": "Nathan C. Ilescas",
+  "author": "Nathan C Ilecas",
   "type": "module",
   "main": "server.js",
   "scripts": {

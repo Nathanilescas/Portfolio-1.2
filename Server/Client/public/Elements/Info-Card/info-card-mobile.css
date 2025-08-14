@@ -1,0 +1,99 @@
+@font-face{
+    font-family: 'Orbitron';
+    src: url(../Fonts/Orbitron-font/Orbitron-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../Fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+
+
+/* Items */
+.info-card {
+    display: inline-flex;
+    flex-direction: column;
+
+    width: 90%;
+    border-radius: 10px;
+
+    transition: background-color 0.5s ease-in-out,
+                box-shadow 0.5s ease-in-out;
+
+}
+
+
+/* HEADER TEXT */
+.info-card .info-card-header {
+
+}
+.info-card .info-card-header h3 {
+    margin: 0 0 5px 0;
+
+    font-family: Orbitron;
+    color: #ebecf1;
+
+}
+.info-card-header-employer {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+.info-card-header-title {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.info-card-header-separator {
+    display: none;
+} 
+
+
+
+/* DATE TEXT */
+.info-card-date {
+    display: block;
+
+    font-family: Quicksand;
+    font-weight: 200;
+    color: #ebecf1;
+}
+
+
+/* PARAGRAPH TEXT*/
+.info-card .info-card-description {
+    font-family: Quicksand;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #adb5dc;
+
+    margin: 15px 0;
+}
+
+/* SKILLS */
+.info-card .info-card-skill ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    list-style: none;
+    margin: 0 0 80px 0;
+    padding: 0 0 0 10px;
+}
+.info-card .info-card-skill li {
+    background-color: #03c929;
+    box-shadow: inset 0px 0px 5px 3px #01821a,
+                    0 0 5px 1px #03c929;
+
+    border-radius: 10px;
+    align-content: center;
+
+    margin: 0 5px 10px 5px
+}
+.info-card .info-card-skill li h4 {
+    user-select: none;
+    font-family: Quicksand;
+    font-size: .8rem;
+
+    margin: 2px 5px;
+    padding: 5px;
+}
